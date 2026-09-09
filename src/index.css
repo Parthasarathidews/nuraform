@@ -1,0 +1,407 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Antonia";
+  src: url("./assets/fonts/Antonia-Variable.otf") format("opentype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DMSans";
+  src: url("./assets/fonts/DMSans-Variable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  /* background: #f9bba2; */
+}
+
+body {
+  font-family: "DMSans", sans-serif;
+  overflow-x: hidden;
+}
+
+:root {
+  --fs12: clamp(6.2px, 12vw * 100 / 1920, 12px);
+  --fs13: clamp(6.7166666667px, 13vw * 100 / 1920, 13px);
+  --fs14: clamp(7.2333333333px, 14vw * 100 / 1920, 14px);
+  --fs15: clamp(7.75px, 15vw * 100 / 1920, 15px);
+  --fs16: clamp(8.2666666667px, 16vw * 100 / 1920, 16px);
+  --fs17: clamp(8.7833333333px, 17vw * 100 / 1920, 17px);
+  --fs18: clamp(9.3px, 18vw * 100 / 1920, 18px);
+  --fs19: clamp(9.8166666667px, 19vw * 100 / 1920, 19px);
+  --fs20: clamp(10.3333333333px, 20vw * 100 / 1920, 20px);
+  --fs21: clamp(10.85px, 21vw * 100 / 1920, 21px);
+  --fs22: clamp(11.3666666667px, 22vw * 100 / 1920, 22px);
+  --fs23: clamp(11.8833333333px, 23vw * 100 / 1920, 23px);
+  --fs24: clamp(12.4px, 24vw * 100 / 1920, 24px);
+  --fs25: clamp(12.9166666667px, 25vw * 100 / 1920, 25px);
+  --fs26: clamp(13.4333333333px, 26vw * 100 / 1920, 26px);
+  --fs27: clamp(13.95px, 27vw * 100 / 1920, 27px);
+  --fs28: clamp(14.4666666667px, 28vw * 100 / 1920, 28px);
+  --fs29: clamp(14.9833333333px, 29vw * 100 / 1920, 29px);
+  --fs30: clamp(15.5px, calc(30vw * 100 / 1920), 30px);
+  --fs31: clamp(16.0166666667px, 31vw * 100 / 1920, 31px);
+  --fs32: clamp(16.5333333333px, 32vw * 100 / 1920, 32px);
+  --fs33: clamp(17.05px, 33vw * 100 / 1920, 33px);
+  --fs34: clamp(17.5666666667px, 34vw * 100 / 1920, 34px);
+  --fs35: clamp(18.0833333333px, 35vw * 100 / 1920, 35px);
+  --fs36: clamp(18.6px, 36vw * 100 / 1920, 36px);
+  --fs37: clamp(19.1166666667px, 37vw * 100 / 1920, 37px);
+  --fs38: clamp(19.6333333333px, 38vw * 100 / 1920, 38px);
+  --fs39: clamp(20.15px, 39vw * 100 / 1920, 39px);
+  --fs40: clamp(20.6666666667px, 40vw * 100 / 1920, 40px);
+  --fs41: clamp(21.1833333333px, 41vw * 100 / 1920, 41px);
+  --fs42: clamp(21.7px, 42vw * 100 / 1920, 42px);
+  --fs43: clamp(22.2166666667px, 43vw * 100 / 1920, 43px);
+  --fs44: clamp(22.7333333333px, 44vw * 100 / 1920, 44px);
+  --fs45: clamp(23.25px, 45vw * 100 / 1920, 45px);
+  --fs46: clamp(23.7666666667px, 46vw * 100 / 1920, 46px);
+  --fs47: clamp(24.2833333333px, 47vw * 100 / 1920, 47px);
+  --fs48: clamp(24.8px, 48vw * 100 / 1920, 48px);
+  --fs49: clamp(25.3166666667px, 49vw * 100 / 1920, 49px);
+  --fs50: clamp(25.8333333333px, 50vw * 100 / 1920, 50px);
+  --fs51: clamp(26.35px, 51vw * 100 / 1920, 51px);
+  --fs52: clamp(26.8666666667px, 52vw * 100 / 1920, 52px);
+  --fs53: clamp(27.3833333333px, 53vw * 100 / 1920, 53px);
+  --fs54: clamp(27.9px, 54vw * 100 / 1920, 54px);
+  --fs55: clamp(28.4166666667px, 55vw * 100 / 1920, 55px);
+  --fs56: clamp(28.9333333333px, 56vw * 100 / 1920, 56px);
+  --fs57: clamp(29.45px, 57vw * 100 / 1920, 57px);
+  --fs58: clamp(29.9666666667px, 58vw * 100 / 1920, 58px);
+  --fs59: clamp(30.4833333333px, 59vw * 100 / 1920, 59px);
+  --fs60: clamp(31px, 60vw * 100 / 1920, 60px);
+  --fs61: clamp(31.5166666667px, 61vw * 100 / 1920, 61px);
+  --fs62: clamp(32.0333333333px, 62vw * 100 / 1920, 62px);
+  --fs63: clamp(32.55px, 63vw * 100 / 1920, 63px);
+  --fs64: clamp(33.0666666667px, 64vw * 100 / 1920, 64px);
+  --fs65: clamp(33.5833333333px, 65vw * 100 / 1920, 65px);
+  --fs66: clamp(34.1px, 66vw * 100 / 1920, 66px);
+  --fs67: clamp(34.6166666667px, 67vw * 100 / 1920, 67px);
+  --fs68: clamp(35.1333333333px, 68vw * 100 / 1920, 68px);
+  --fs69: clamp(35.65px, 69vw * 100 / 1920, 69px);
+  --fs70: clamp(36.17px, 3.646vw, 70px);
+  --fs71: clamp(36.6833333333px, 71vw * 100 / 1920, 71px);
+  --fs72: clamp(37.2px, 72vw * 100 / 1920, 72px);
+  --fs73: clamp(37.7166666667px, 73vw * 100 / 1920, 73px);
+  --fs74: clamp(38.2333333333px, 74vw * 100 / 1920, 74px);
+  --fs75: clamp(38.75px, 75vw * 100 / 1920, 75px);
+  --fs76: clamp(39.2666666667px, 76vw * 100 / 1920, 76px);
+  --fs77: clamp(39.7833333333px, 77vw * 100 / 1920, 77px);
+  --fs78: clamp(40.3px, 78vw * 100 / 1920, 78px);
+  --fs79: clamp(40.8166666667px, 79vw * 100 / 1920, 79px);
+  --fs80: clamp(41.3333333333px, 80vw * 100 / 1920, 80px);
+  --fs90: clamp(42.8166666667px, 90vw * 100 / 1920, 90px);
+  --fs100: clamp(42.3333333333px, 100vw * 100 / 1920, 100px);
+  --fs120: clamp(43.8166666667px, 120vw * 100 / 1920, 120px);
+}
+
+@theme {
+  --font-antonia: "Antonia", serif;
+  --font-dmsans: "DMSans", sans-serif;
+  --color-navlinks: #454545;
+  --color-descriptionText: #7d7d7d;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* #gradient-canvas {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  --gradient-color-1: #ff633e;
+  --gradient-color-2: #d7adf0;
+  --gradient-color-3: #ff61ab;
+  --gradient-color-4: #f9bba2;
+} */
+
+/* @media screen and (max-width: 1280px) and (max-height: 720px) {
+  .left-bubble-container,
+  .right-bubble-container {
+    bottom: 20%;
+  }
+  .banner-sectoion-contents-container {
+    margin-top: -5%;
+  }
+} */
+@theme {
+  --animate-loader-spin: loader-spin 1.4s linear infinite;
+  --animate-loader-bg: loader-bg 2.4s ease-in-out infinite;
+  --animate-loader-bg-2: loader-bg-2 2.8s ease-in-out infinite;
+  --animate-loader-logo: loader-logo 1.8s ease-in-out infinite;
+
+  @keyframes loader-spin {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes loader-bg {
+    0%,
+    100% {
+      transform: scale(0.92) rotate(0deg);
+      opacity: 0.55;
+    }
+
+    50% {
+      transform: scale(1.08) rotate(8deg);
+      opacity: 1;
+    }
+  }
+
+  @keyframes loader-bg-2 {
+    0%,
+    100% {
+      transform: scale(1.05) rotate(0deg);
+      opacity: 0.35;
+    }
+
+    50% {
+      transform: scale(0.9) rotate(-12deg);
+      opacity: 0.8;
+    }
+  }
+
+  @keyframes loader-logo {
+    0%,
+    100% {
+      transform: scale(0.92);
+      opacity: 0.75;
+    }
+
+    50% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes nf-blob-1 {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+    border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+  }
+  25% {
+    transform: translate(60px, -80px) scale(1.08);
+    border-radius: 40% 60% 30% 70% / 60% 40% 60% 40%;
+  }
+  50% {
+    transform: translate(120px, 40px) scale(0.95);
+    border-radius: 70% 30% 50% 50% / 40% 70% 30% 60%;
+  }
+  75% {
+    transform: translate(30px, 100px) scale(1.05);
+    border-radius: 50% 50% 60% 40% / 65% 35% 65% 35%;
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+    border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+  }
+}
+
+@keyframes nf-blob-2 {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+    border-radius: 40% 60% 50% 50% / 60% 40% 60% 40%;
+  }
+  33% {
+    transform: translate(-80px, 60px) scale(1.1);
+    border-radius: 60% 40% 40% 60% / 45% 55% 45% 55%;
+  }
+  66% {
+    transform: translate(-30px, -100px) scale(0.92);
+    border-radius: 50% 50% 70% 30% / 55% 45% 55% 45%;
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+    border-radius: 40% 60% 50% 50% / 60% 40% 60% 40%;
+  }
+}
+
+@keyframes nf-blob-3 {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+    border-radius: 55% 45% 60% 40% / 50% 55% 45% 50%;
+  }
+  20% {
+    transform: translate(-50px, -60px) scale(1.06);
+    border-radius: 45% 55% 40% 60% / 60% 40% 55% 45%;
+  }
+  50% {
+    transform: translate(-100px, 80px) scale(0.97);
+    border-radius: 65% 35% 55% 45% / 45% 60% 40% 55%;
+  }
+  80% {
+    transform: translate(20px, 50px) scale(1.04);
+    border-radius: 40% 60% 65% 35% / 55% 45% 60% 40%;
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+    border-radius: 55% 45% 60% 40% / 50% 55% 45% 50%;
+  }
+}
+
+@keyframes nf-blob-4 {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+    border-radius: 70% 30% 45% 55% / 45% 65% 35% 55%;
+  }
+  40% {
+    transform: translate(70px, 90px) scale(0.93);
+    border-radius: 35% 65% 60% 40% / 60% 35% 65% 35%;
+  }
+  70% {
+    transform: translate(-40px, 40px) scale(1.07);
+    border-radius: 55% 45% 35% 65% / 50% 60% 40% 60%;
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+    border-radius: 70% 30% 45% 55% / 45% 65% 35% 55%;
+  }
+}
+
+@keyframes nf-blob-5 {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+    border-radius: 45% 55% 65% 35% / 60% 45% 55% 40%;
+  }
+  30% {
+    transform: translate(-60px, -40px) scale(1.09);
+    border-radius: 60% 40% 45% 55% / 40% 65% 35% 60%;
+  }
+  60% {
+    transform: translate(50px, -80px) scale(0.94);
+    border-radius: 35% 65% 55% 45% / 55% 40% 60% 45%;
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+    border-radius: 45% 55% 65% 35% / 60% 45% 55% 40%;
+  }
+}
+
+@keyframes nf-shape-float {
+  0%,
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.02);
+  }
+}
+
+@keyframes nf-shape-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.85) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0px);
+  }
+}
+
+@keyframes nf-shape-thankyou {
+  0% {
+    transform: scale(0.7) rotate(-6deg);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.05) rotate(2deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes nf-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes nf-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Utility classes used by the form landing page */
+.nf-blob-1 {
+  animation: nf-blob-1 18s ease-in-out infinite;
+  will-change: transform;
+}
+.nf-blob-2 {
+  animation: nf-blob-2 22s ease-in-out infinite;
+  will-change: transform;
+}
+.nf-blob-3 {
+  animation: nf-blob-3 26s ease-in-out infinite;
+  will-change: transform;
+}
+.nf-blob-4 {
+  animation: nf-blob-4 20s ease-in-out infinite;
+  will-change: transform;
+}
+.nf-blob-5 {
+  animation: nf-blob-5 24s ease-in-out infinite;
+  will-change: transform;
+}
+.nf-shape-float {
+  animation: nf-shape-float 4s ease-in-out infinite;
+  will-change: transform;
+}
+.nf-shape-appear {
+  animation: nf-shape-appear 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.nf-shape-thankyou {
+  animation: nf-shape-thankyou 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.nf-fade-up {
+  animation: nf-fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.nf-card-in {
+  animation: nf-card-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
