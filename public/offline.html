@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="theme-color" content="#ff633e" />
+
+    <title>You're Offline | Nuraform</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        font-family: Arial, sans-serif;
+        background: #f7f7f7;
+        color: #171717;
+      }
+
+      .offline-container {
+        width: 100%;
+        max-width: 520px;
+        padding: 48px 32px;
+        text-align: center;
+        background: #ffffff;
+        border-radius: 24px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+      }
+
+      .offline-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: #ff633e;
+        color: #ffffff;
+        font-size: 36px;
+      }
+
+      .offline-container h1 {
+        margin-bottom: 12px;
+        font-size: 32px;
+        line-height: 1.2;
+      }
+
+      .offline-container p {
+        margin-bottom: 28px;
+        color: #666666;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      .retry-button {
+        border: none;
+        padding: 14px 28px;
+        border-radius: 999px;
+        background: #ff633e;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+      }
+
+      .retry-button:hover {
+        transform: translateY(-2px);
+      }
+
+      .status {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #888888;
+      }
+
+      @media (max-width: 576px) {
+        .offline-container {
+          padding: 40px 24px;
+        }
+
+        .offline-container h1 {
+          font-size: 26px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="offline-container">
+      <div class="offline-icon">!</div>
+
+      <h1>You're Offline</h1>
+
+      <p>It looks like you're not connected to the internet. Don't worry, some parts of the app may still be available offline.</p>
+
+      <button class="retry-button" onclick="window.location.reload()">Try Again</button>
+
+      <div class="status">Check your internet connection and try again.</div>
+    </main>
+  </body>
+</html>

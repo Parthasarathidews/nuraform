@@ -249,8 +249,8 @@ const DemoPageSidebar = ({ user, userDetails, isSidebarHovered, showProfileSecti
           </div>
 
           {/* Logout */}
-          <div role="button" onClick={handleLogout} className="logoutButton cursor-pointer">
-            <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+          <div role="button" onClick={handleLogout} className="logoutButton w-[10%] cursor-pointer">
+            <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="text-white">
               <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
               <polyline points="16 17 21 12 16 7" />
               <line x1="21" y1="12" x2="9" y2="12" />
